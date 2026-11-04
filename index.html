@@ -110,6 +110,9 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
 /* una sección por vez */
 .js [data-page]:not(.on){display:none}
 nav a.on{color:var(--ink,#1a1a1a);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.research>.wrap>.whyrow{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:48px;margin:-8px 0 40px}
+.whyrow h3.why{margin-top:0}
+@media (max-width:760px){.research>.wrap>.whyrow{grid-template-columns:minmax(0,1fr);gap:20px}}
 </style>
 </head>
 <body>
@@ -168,10 +171,13 @@ nav a.on{color:var(--ink,#1a1a1a);text-decoration:underline;text-decoration-thic
         <div class="intro">
           <p>My research focuses on organisms as <strong>ecosystem engineers</strong>, that is, on how organisms physically modify their environment. I study the consequences of these modifications for the composition and richness of biological communities, for the flows of materials and energy in ecosystems, and for the integrity of the physical environment through processes such as bioerosion and bioprotection. I also investigate how the physical environment and other organisms influence the abundance, persistence and activity of engineers, as well as various aspects of their biology. My interest in this topic arose early in my career, while I was studying the shell beds of the stout razor clam <i>Tagelus plebeius</i> as distinctive benthic habitats in an Argentinean coastal lagoon (Mar Chiquita). Since then, I have worked on a variety of study systems and contributed to the conceptual development of ecosystem engineering, its application across taxonomic groups and environments, and its integration with, and distinction from, other ecological concepts.</p>
           <ol class="pubs"><li><b>Gutiérrez JL</b>, Iribarne OO (1999). Role of Holocene beds of the stout razor clam <i>Tagelus plebeius</i> in structuring present benthic communities. <i>Marine Ecology Progress Series</i> 185: 213-228.</li></ol>
-          <h3 class="why">Why study ecosystem engineers?</h3>
-          <p>Often, the strongest effect of a species on others is not eating them, being eaten by them or competing with them, but changing the place where they live. By physically modifying the environment, ecosystem engineers determine which species can live in a place, regulate flows of materials and energy and affect the stability of the physical environment itself, often with effects that outlast the engineers themselves. Understanding them is key to explaining community structure and ecosystem functioning. It is also essential for conserving and restoring habitats that depend on them, such as salt marshes, seagrass meadows, mangrove and macroalgal forests, and invertebrate reefs and beds, and for anticipating the effects of biological invasions and climate change.</p>
         </div>
       </header>
+      <div class="whyrow">
+        <div><figure class="sysimg" style="margin-top:0"><img src="img/petricola.jpg" alt="Studying boreholes made by the boring bivalve Petricola dactylus at El Espigón, Río Negro Province, Argentina." width="768" height="575" loading="lazy"><figcaption>Studying boreholes made by the boring bivalve <i>Petricola dactylus</i> at El Espigón, Río Negro Province, Argentina.</figcaption></figure></div>
+        <div class="intro"><h3 class="why">Why study ecosystem engineers?</h3>
+          <p>Often, the strongest effect of a species on others is not eating them, being eaten by them or competing with them, but changing the place where they live. By physically modifying the environment, ecosystem engineers determine which species can live in a place, regulate flows of materials and energy and affect the stability of the physical environment itself, often with effects that outlast the engineers themselves. Understanding them is key to explaining community structure and ecosystem functioning. It is also essential for conserving and restoring habitats that depend on them, such as salt marshes, seagrass meadows, mangrove and macroalgal forests, and invertebrate reefs and beds, and for anticipating the effects of biological invasions and climate change.</p></div>
+      </div>
 
       <article class="sys">
         <div><span class="tag">Rocky intertidal shores</span><h3>Mussel beds</h3><figure class="sysimg"><img src="img/mejillones.jpg" alt="Fieldwork on an intertidal mussel bed near Miramar, Buenos Aires Province, Argentina." width="1200" height="900" loading="lazy"><figcaption>Fieldwork on an intertidal mussel bed near Miramar, Buenos Aires Province, Argentina.</figcaption></figure></div>
