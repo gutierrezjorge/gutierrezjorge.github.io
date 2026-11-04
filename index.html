@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://gutierrezjorge.github.io/">
-<link rel="alternate" hreflang="en" href="https://gutierrezjorge.github.io/"><link rel="alternate" hreflang="es" href="https://gutierrezjorge.github.io/es/"><link rel="alternate" hreflang="x-default" href="https://gutierrezjorge.github.io/">
+<link rel="alternate" hreflang="en" href="https://gutierrezjorge.github.io/"><link rel="alternate" hreflang="es" href="https://gutierrezjorge.github.io/es/"><link rel="alternate" hreflang="pt-BR" href="https://gutierrezjorge.github.io/pt/"><link rel="alternate" hreflang="x-default" href="https://gutierrezjorge.github.io/">
 <meta property="og:url" content="https://gutierrezjorge.github.io/">
 <meta property="og:image" content="https://gutierrezjorge.github.io/img/perfil.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -123,8 +123,8 @@ nav a.on{color:var(--ink,#1a1a1a);text-decoration:underline;text-decoration-thic
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
       <a href="#publications">Publications</a>
-      <span class="lang" role="group" aria-label="Idioma / Language">
-        <a href="es/" hreflang="es" lang="es">ES</a><span class="cur" aria-current="page">EN</span>
+      <span class="lang" role="group" aria-label="Idioma / Language / Língua">
+        <span class="cur" aria-current="page">EN</span><a href="es/" hreflang="es" lang="es" data-l="es">ES</a><a href="pt/" hreflang="pt-BR" lang="pt-BR" data-l="pt">PT</a>
       </span>
     </nav>
   </div>
@@ -346,11 +346,13 @@ document.querySelectorAll('.copy').forEach(function(btn){btn.addEventListener('c
     var p=t?(t.closest('[data-page]')||pages[0]):pages[0];
     pages.forEach(function(x){x.classList.toggle('on',x===p);});
     links.forEach(function(a){var on=a.getAttribute('href')==='#'+p.id&&a.className!=='brand';a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','page');else if(a.className!=='brand')a.removeAttribute('aria-current');});
-    var m={inicio:'home',investigacion:'research',docencia:'teaching',publicaciones:'publications'},r={};for(var k in m)r[m[k]]=k;
-    var ln=document.querySelector('.lang a');if(ln){var base=ln.getAttribute('href').split('#')[0],o=m[p.id]||r[p.id];ln.setAttribute('href',base+(o&&p!==pages[0]?'#'+o:''));}
+    var ids={en:['home','research','teaching','publications'],es:['inicio','investigacion','docencia','publicaciones'],pt:['inicio','pesquisa','ensino','publicacoes']},i=pages.indexOf(p);
+    [].forEach.call(document.querySelectorAll('.lang a[data-l]'),function(a){var base=a.getAttribute('href').split('#')[0];a.setAttribute('href',base+(i>0?'#'+ids[a.getAttribute('data-l')][i]:''));});
     if(t&&t!==p){t.scrollIntoView();}else{window.scrollTo(0,0);}
   }
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
   window.addEventListener('hashchange',show);
+  window.addEventListener('load',function(){setTimeout(show,0);});
   show();
 })();
 </script>
