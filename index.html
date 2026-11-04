@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jorge L. Gutiérrez – Ingeniería ecosistémica | CONICET–UNMdP</title>
+<meta name="description" content="Jorge L. Gutiérrez, investigador del CONICET en la Universidad Nacional de Mar del Plata (Argentina). Organismos como ingenieros ecosistémicos en costas del Atlántico Sudoccidental: mejillones, algas coralinas, bivalvos perforadores, dunas y marismas.">
+<meta property="og:title" content="Jorge L. Gutiérrez – Ingeniería ecosistémica | CONICET–UNMdP">
+<meta property="og:description" content="Jorge L. Gutiérrez, investigador del CONICET en la Universidad Nacional de Mar del Plata (Argentina). Organismos como ingenieros ecosistémicos en costas del Atlántico Sudoccidental: mejillones, algas coralinas, bivalvos perforadores, dunas y marismas.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://gutierrezjorge.github.io/">
+<link rel="alternate" hreflang="es" href="https://gutierrezjorge.github.io/"><link rel="alternate" hreflang="en" href="https://gutierrezjorge.github.io/en/"><link rel="alternate" hreflang="x-default" href="https://gutierrezjorge.github.io/">
+<meta property="og:url" content="https://gutierrezjorge.github.io/">
+<meta property="og:image" content="https://gutierrezjorge.github.io/img/perfil.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: field notebook. A narrow label column (habitat tag, system name) beside a reading column; one coralline-pink accent on cool tidal neutrals. */
+:root{
+  --bg:#f2f5f5; --surface:#ffffff; --ink:#132120; --muted:#4d5d5b; --rule:#d3dcdb;
+  --accent:#a8395f; --accent-soft:#f5e1e8; --deep:#1f3b47;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Literata",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1615; --surface:#15201f; --ink:#e4ecea; --muted:#9fb1ae; --rule:#2a3937;
+  --accent:#e98aac; --accent-soft:#3b1f2a; --deep:#a7c9d4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1615; --surface:#15201f; --ink:#e4ecea; --muted:#9fb1ae; --rule:#2a3937;
+  --accent:#e98aac; --accent-soft:#3b1f2a; --deep:#a7c9d4; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.brand{font-family:var(--f-display);font-stretch:80%;font-weight:600;font-size:20px;letter-spacing:.01em;color:var(--ink);text-decoration:none}
+nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+nav a{font-family:var(--f-display);font-size:15px;color:var(--muted);text-decoration:none}
+nav a:hover,nav a:focus-visible{color:var(--accent)}
+.lang{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden}
+.lang a,.lang span.cur{display:inline-block;text-decoration:none;font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;background:transparent;color:var(--muted);border:0;padding:5px 11px;cursor:pointer}
+.lang span.cur{background:var(--ink);color:var(--bg)}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;font-weight:600}
+.hero{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:48px;padding-block:56px 40px;align-items:start}
+.portrait{width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:4px;display:block;background:var(--surface)}
+.sysimg{margin:18px 0 0;max-width:100%}
+.sysimg img{width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:3px;display:block;background:var(--surface)}
+.sysimg figcaption{font-family:var(--f-mono);font-size:12px;line-height:1.45;color:var(--muted);margin-top:7px}
+.photo{aspect-ratio:4/5;max-width:100%;border:1.5px dashed var(--rule);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--f-mono);font-size:12px;background:var(--surface);text-align:center;padding:12px}
+.hero h1{font-size:clamp(40px,6.4vw,68px);font-stretch:72%;line-height:1;letter-spacing:-.01em}
+.roles{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:4px;font-family:var(--f-display);font-size:16px;color:var(--muted)}
+.bio{margin:24px 0 0;max-width:62ch}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.links a,.links span.pend{font-family:var(--f-mono);font-size:13px;padding:6px 12px;border:1px solid var(--rule);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--surface)}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links span.pend{color:var(--muted);border-style:dashed}
+.email{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 0;font-family:var(--f-mono);font-size:14px}
+.email button{font-family:var(--f-mono);font-size:12px;background:transparent;border:1px solid var(--rule);color:var(--muted);border-radius:4px;padding:3px 9px;cursor:pointer}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.band{margin:4px 0 0;max-width:100%}
+.band img{width:100%;max-width:100%;height:auto;aspect-ratio:3/1;object-fit:cover;border-radius:4px;display:block;background:var(--surface)}
+.news{border-top:1px solid var(--rule);padding-block:36px 48px;display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:48px}
+.news ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.news li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px}
+.news time{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding-top:3px}
+section.research{border-top:1px solid var(--ink);padding-block:56px 72px}
+.research>.wrap>header{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:48px;margin-bottom:40px}
+.research h2{font-size:clamp(32px,4.4vw,44px);font-stretch:75%;line-height:1.05;margin-top:8px}
+.intro p{margin:0;max-width:66ch}
+.intro strong{font-weight:600;color:var(--deep)}
+.sys{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:48px;padding-block:32px;border-top:1px solid var(--rule)}
+.sys .tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:8px}
+.sys h3{font-size:24px;font-stretch:80%;line-height:1.15}
+.sys p{margin:0;max-width:66ch}
+.pubs-label{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
+ol.pubs{margin:0;padding:0;list-style:none;display:grid;gap:10px;max-width:70ch}
+ol.pubs li{font-size:14.5px;line-height:1.55;padding-left:14px;border-left:2px solid var(--accent-soft)}
+ol.pubs b{font-weight:600}
+.intro ol.pubs{margin-top:18px}
+.intro h3.why{font-size:20px;font-stretch:80%;margin:32px 0 10px;color:var(--deep)}
+.year{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:48px;padding-block:20px;border-top:1px solid var(--rule)}
+.year h3{font-size:22px;font-stretch:80%;font-variant-numeric:tabular-nums}
+.count{margin:0 0 14px;max-width:62ch}
+.publinks{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.publinks a{font-family:var(--f-mono);font-size:13px;padding:6px 12px;border:1px solid var(--rule);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--surface)}
+.publinks a:hover{border-color:var(--accent);color:var(--accent)}
+ul.editions{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-width:66ch}
+ul.editions li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;font-size:15px}
+ul.editions .yr{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.mapfig{margin:22px 0 0;max-width:620px}
+.slidefig{margin:22px 0 4px;max-width:560px}
+.slidefig img{width:100%;max-width:100%;height:auto;display:block;background:#fff;border:1px solid var(--rule);border-radius:4px;padding:10px}
+.slidefig figcaption{font-family:var(--f-mono);font-size:12px;line-height:1.45;color:var(--muted);margin-top:8px}
+.mapfig img{width:100%;max-width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:4px}
+.mapfig figcaption{font-family:var(--f-mono);font-size:12px;line-height:1.45;color:var(--muted);margin-top:8px}
+@media (max-width:520px){ul.editions li{grid-template-columns:minmax(0,1fr);gap:2px}}
+footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+@media (max-width:760px){
+  .hero,.news,.research>.wrap>header,.sys,.year{grid-template-columns:minmax(0,1fr);gap:20px}
+  .hero{padding-block:32px 28px}
+  .photo,.portrait{max-width:220px}
+  .sysimg{max-width:420px}
+  nav{gap:14px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Jorge L. Gutiérrez</a>
+    <nav aria-label="Secciones">
+      <a href="#inicio">Inicio</a>
+      <a href="#investigacion">Investigación</a>
+      <a href="#docencia">Docencia</a>
+      <a href="#publicaciones">Publicaciones</a>
+      <span class="lang" role="group" aria-label="Idioma / Language">
+        <span class="cur" aria-current="page">ES</span><a href="en/" hreflang="en" lang="en">EN</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main lang="es">
+  <div class="wrap" id="inicio">
+    <div class="hero">
+      <img class="portrait" src="img/perfil.jpg" alt="Jorge L. Gutiérrez" width="800" height="1000">
+      <div>
+        <h1>Jorge L. Gutiérrez</h1>
+        <ul class="roles">
+          <li>Investigador Principal, CONICET · Universidad Nacional de Mar del Plata, Argentina</li>
+          <li>Profesor Visitante, Instituto do Mar, Universidade Federal de São Paulo, Brasil</li>
+        </ul>
+        <p class="bio">Soy biólogo e investigo cómo los organismos modifican físicamente su ambiente, es decir, cómo actúan como ingenieros ecosistémicos, y qué consecuencias tiene esto para la biodiversidad, el funcionamiento de los ecosistemas y la integridad del ambiente físico. Trabajo principalmente en ambientes costeros del Atlántico Sudoccidental, desde costas rocosas y fondos de algas coralinas hasta marismas y dunas. Me doctoré en Ciencias Biológicas en la Universidad Nacional de Mar del Plata, Argentina, y realicé mi posdoctorado en el Institute of Ecosystem Studies (hoy Cary Institute of Ecosystem Studies), en Estados Unidos. En mis ratos libres me dedico a la observación de aves y comparto mis registros en <a href="https://ebird.org/profile/NjI5ODI2/world" target="_blank" rel="noopener">eBird</a>.</p>
+        <ul class="links">
+          <li><a href="https://scholar.google.com/citations?user=yCCGhYgAAAAJ&amp;hl=es" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-2914-9274" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="https://www.researchgate.net/profile/Jorge-Gutierrez-9" target="_blank" rel="noopener">ResearchGate</a></li>
+          <li><a href="cv/CV_JLGutierrez_ES.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+        </ul>
+        <div class="email"><span>jgutierrez@grieta.org.ar</span><button type="button" class="copy" data-ok="Copiado">Copiar email</button></div>
+      </div>
+    </div>
+    <figure class="band"><img src="img/costa.jpg" alt="" width="1800" height="600" loading="lazy"></figure>
+    <div class="news">
+      <div><div class="eyebrow">Novedades</div></div>
+      <ul>
+        <li><time>2026</time><span>Me incorporé como Profesor Visitante en el Instituto do Mar (UNIFESP), Santos, Brasil, para dictar cursos de posgrado sobre los organismos como ingenieros ecosistémicos y otros temas de ecología, y para continuar nuestra investigación sobre ingeniería ecosistémica por algas coralinas.</span></li>
+        <li><time>2026</time><span>Nuevo artículo: “The rolling stones' legacy: rhodoliths retain their habitat function after algal death” (<i>Marine Environmental Research</i>). DOI: <a href="https://doi.org/10.1016/j.marenvres.2025.107809" target="_blank" rel="noopener">10.1016/j.marenvres.2025.107809</a></span></li>
+        <li><time>2026</time><span>Nuevo artículo: “Thermal refugia and summer survival of the non-native land snail <i>Theba pisana</i> in Pampean coastal dunes: the role of invasive iceplants” (<i>Acta Oecologica</i>). DOI: <a href="https://doi.org/10.1016/j.actao.2026.104166" target="_blank" rel="noopener">10.1016/j.actao.2026.104166</a></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="research" id="investigacion">
+    <div class="wrap">
+      <header>
+        <div><div class="eyebrow">Investigación</div><h2>Modificación del ambiente por organismos</h2></div>
+        <div class="intro">
+          <p>Mi investigación se centra en los organismos como <strong>ingenieros ecosistémicos</strong>, es decir, en cómo los seres vivos modifican físicamente su ambiente. Estudio las consecuencias de estas modificaciones sobre la composición y la riqueza de las comunidades biológicas, sobre los flujos de materiales y energía en los ecosistemas y sobre la integridad del ambiente físico, a través de procesos como la bioerosión y la bioprotección. A su vez, investigo cómo el ambiente físico y otros organismos influyen sobre la abundancia, la persistencia y la actividad de los ingenieros, así como distintos aspectos de su biología. Mi interés por este tema nació al inicio de mi carrera cuando investigaba los bancos de valvas de la almeja navaja <i>Tagelus plebeius</i> como hábitats bentónicos distintivos en una laguna costera argentina (Mar Chiquita). Desde entonces trabajé en una variedad de sistemas de estudio y contribuí al desarrollo conceptual de la ingeniería ecosistémica, a su aplicación en distintos grupos taxonómicos y ambientes, y a su integración y diferenciación respecto de otros conceptos ecológicos.</p>
+          <ol class="pubs"><li><b>Gutiérrez JL</b>, Iribarne OO (1999). Role of Holocene beds of the stout razor clam <i>Tagelus plebeius</i> in structuring present benthic communities. <i>Marine Ecology Progress Series</i> 185: 213-228.</li></ol>
+          <h3 class="why">¿Por qué estudiar a los ingenieros ecosistémicos?</h3>
+          <p>Muchas veces el efecto más importante de una especie sobre las demás no es comerlas, servirles de alimento ni competir con ellas, sino modificar el lugar donde viven. Al modificar físicamente el ambiente, los ingenieros ecosistémicos determinan qué especies pueden habitar un lugar, regulan flujos de materiales y energía y afectan la estabilidad del propio ambiente físico, a menudo con efectos que perduran más allá de su propia vida. Entenderlos es clave para explicar la estructura de las comunidades y el funcionamiento de los ecosistemas. También es esencial para conservar y restaurar ambientes que dependen de ellos, como marismas, praderas de pastos marinos, bosques de manglar y de macroalgas, y arrecifes y bancos de invertebrados, y para anticipar los efectos de las invasiones biológicas y el cambio climático.</p>
+        </div>
+      </header>
+
+      <article class="sys">
+        <div><span class="tag">Costas rocosas intermareales</span><h3>Bancos de mejillones</h3><figure class="sysimg"><img src="img/mejillones.jpg" alt="Trabajo de campo en un banco de mejillines cerca de Miramar, provincia de Buenos Aires, Argentina." width="1200" height="900" loading="lazy"><figcaption>Trabajo de campo en un banco de mejillines cerca de Miramar, provincia de Buenos Aires, Argentina.</figcaption></figure></div>
+        <div>
+          <p>En las costas rocosas del Atlántico Sudoccidental, mejillines como <i>Brachidontes rodriguezii</i> y <i>Perumytilus purpuratus</i> forman bancos densos que retienen agua y sedimento y ofrecen refugio a una gran diversidad de invertebrados. Con Gabriela Palomo (MACN, CONICET) y nuestros estudiantes, venimos investigando cómo estos bancos, junto con las algas y otros epibiontes que crecen sobre ellos, modifican las condiciones físicas, sostienen comunidades asociadas y protegen de la erosión a las plataformas rocosas blandas. También investigamos qué factores físicos y biológicos regulan su distribución, su persistencia y su recuperación tras disturbios (oleaje, olas de calor, fuerza de fijación).</p>
+          <div class="pubs-label">Publicaciones destacadas</div>
+          <ol class="pubs">
+            <li><b>Gutiérrez JL</b>, Bagur M, Lorenzo R, Palomo MG (2023). A facultative mutualism between habitat-forming species enhances the resistance of rocky shore communities to heat waves. <i>Frontiers in Ecology and Evolution</i> 11: 1278762.</li>
+            <li>Gonzalez JA, Coombes MA, Palomo MG, Isla FI, Soria SA, <b>Gutiérrez JL</b> (2021). Enhanced weathering and erosion of a cohesive shore platform following the experimental removal of mussels. <i>Frontiers in Marine Science</i> 8: 756016.</li>
+            <li><b>Gutiérrez JL</b>, Bagur M, Palomo MG (2019). Algal epibionts as co-engineers in mussel beds: effects on abiotic conditions and mobile interstitial invertebrates. <i>Diversity</i> 11: 17.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="sys">
+        <div><span class="tag">Arrecifes someros · Brasil y Argentina</span><h3>Algas coralinas</h3><figure class="sysimg"><img src="img/coralinas.jpg" alt="Césped de algas coralinas en el intermareal bajo de Playa Los Suecos, provincia de Río Negro, Argentina." width="1200" height="900" loading="lazy"><figcaption>Césped de algas coralinas en el intermareal bajo de Playa Los Suecos, provincia de Río Negro, Argentina.</figcaption></figure></div>
+        <div>
+          <p>Las algas coralinas forman estructuras calcáreas que modifican el ambiente físico y ofrecen hábitat a numerosos organismos. Junto a Guilherme Pereira-Filho (UNIFESP) y otros colegas y estudiantes brasileños, venimos estudiando los bancos de rodolitos (nódulos de algas coralinas de vida libre): cómo sostienen la diversidad de invertebrados y peces, cómo su función como hábitat persiste aun después de la muerte del alga y cómo otros organismos, como peces que construyen montículos, los modifican. Actualmente, junto a colegas de Brasil y Argentina, estamos extendiendo nuestros intereses al rol de las algas coralinas geniculadas en la biodiversidad de los arrecifes someros del Atlántico Sudoccidental y su respuesta a extremos climáticos.</p>
+          <div class="pubs-label">Publicaciones destacadas</div>
+          <ol class="pubs">
+            <li>Oliveira-Carlos FC, Longo PAS, <b>Gutiérrez JL</b>, et al. (2026). The rolling stones' legacy: rhodoliths retain their habitat function after algal death. <i>Marine Environmental Research</i> 215: 107809.</li>
+            <li>Longo PAS, Passos FD, <b>Gutiérrez JL</b>, Laurino IRA, Pereira-Filho GH (2025). Macroalgal foundation species blur latitudinal trends in prosobranch gastropod assemblages. <i>Biodiversity and Conservation</i> 34: 1709-1732.</li>
+            <li>Roos NC, Veras PC, <b>Gutiérrez JL</b>, et al. (2024). Secondary engineering of rhodolith beds by the sand tilefish <i>Malacanthus plumieri</i> generates distinctive habitats for benthic macroinvertebrates and fish. <i>Biodiversity and Conservation</i> 33: 1941-1957.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="sys">
+        <div><span class="tag">Plataformas intermareales · bioerosión</span><h3>Bivalvos perforadores</h3><figure class="sysimg"><img src="img/perforadores.jpg" alt="Roca seccionada (calcita dolomítica) con Leiosolenus patagonicus en sus perforaciones a altas densidades (Playa Los Suecos, provincia de Río Negro, Argentina)." width="1200" height="900" loading="lazy"><figcaption>Roca seccionada (calcita dolomítica) con <i>Leiosolenus patagonicus</i> en sus perforaciones a altas densidades (Playa Los Suecos, provincia de Río Negro, Argentina).</figcaption></figure></div>
+        <div>
+          <p>Mi trabajo en este sistema surgió por iniciativa de María Bagur (CADIC, CONICET) y se centró principalmente en el dátil de mar <i>Leiosolenus patagonicus</i>, que perfora químicamente las rocas carbonáticas de las plataformas intermareales y es uno de los principales agentes de bioerosión de la costa. Estudiamos su biología (crecimiento, edad, mortalidad), las tasas de bioerosión que genera y el balance de carbonato de calcio entre lo que disuelve al perforar y lo que fija en su valva y en el revestimiento calcáreo de sus perforaciones. También investigamos cómo las perforaciones vacías funcionan como refugio y mantienen la riqueza de invertebrados en ambientes físicamente rigurosos.</p>
+          <div class="pubs-label">Publicaciones destacadas</div>
+          <ol class="pubs">
+            <li><b>Gutiérrez JL</b>, Bagur M, Arribas LP, Palomo MG (2025). Chemically-boring bivalves can mineralize more CaCO₃ than they dissolve: the case of <i>Leiosolenus patagonicus</i>. <i>Marine Biology</i> 172: 152.</li>
+            <li>Bagur M, <b>Gutiérrez JL</b>, Arribas LP, Palomo MG (2019). Vacant bivalve boreholes increase invertebrate species richness in a physically harsh, low intertidal platform. <i>Diversity</i> 11: 39.</li>
+            <li>Bagur M, <b>Gutiérrez JL</b>, Arribas LP, Palomo MG (2014). Endolithic invertebrate communities and bioerosion rates in Southwestern Atlantic intertidal consolidated sediments. <i>Marine Biology</i> 161: 2279-2292.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="sys">
+        <div><span class="tag">Dunas costeras pampeanas</span><h3>Plantas de dunas</h3><figure class="sysimg"><img src="img/dunas.jpg" alt="Caracoles Theba pisana sobre Carpobrotus en las dunas costeras de San Eduardo del Mar, provincia de Buenos Aires, Argentina." width="1200" height="900" loading="lazy"><figcaption>Caracoles <i>Theba pisana</i> sobre <i>Carpobrotus</i> en las dunas costeras de San Eduardo del Mar, provincia de Buenos Aires, Argentina.</figcaption></figure></div>
+        <div>
+          <p>En las dunas costeras pampeanas, los matorrales de la planta invasora <i>Carpobrotus</i> (uña de gato) cubren grandes superficies y cambian las condiciones del ambiente a nivel del suelo. En los últimos años he estudiado cómo estos matorrales crean refugios térmicos que permiten sobrevivir el verano al caracol invasor <i>Theba pisana</i>. Esto aumenta su abundancia y su impacto sobre la vegetación nativa, un caso de facilitación entre especies invasoras. Actualmente participo en estudios a escala global sobre la ecología, genética y morfología del complejo de híbridos de <i>Carpobrotus</i>.</p>
+          <div class="pubs-label">Publicaciones destacadas</div>
+          <ol class="pubs">
+            <li><b>Gutiérrez JL</b> (2026). Thermal refugia and summer survival of the non-native land snail <i>Theba pisana</i> in Pampean coastal dunes: the role of invasive iceplants. <i>Acta Oecologica</i> 131: 104166.</li>
+            <li><b>Gutiérrez JL</b> (2021). Invader to invader facilitation: ice plant mats prompt increased densities and grazing impacts of white garden snails in a Pampean coastal dune system. <i>Biological Invasions</i> 23: 2381-2387.</li>
+            <li>Novoa A, Hirsch H, Castillo ML, et al. (2023). Genetic and morphological insights into the <i>Carpobrotus</i> hybrid complex around the world. <i>NeoBiota</i> 89: 135-160.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="sys">
+        <div><span class="tag">Marismas del Atlántico Sudoccidental</span><h3>Marismas: plantas y cangrejos</h3><figure class="sysimg"><img src="img/marismas.jpg?v=2" alt="Matas de Spartina densiflora y un cangrejo Neohelice granulata (abajo, al centro) junto a la entrada de su cueva en la laguna costera de Mar Chiquita, provincia de Buenos Aires, Argentina." width="1200" height="900" loading="lazy"><figcaption>Matas de <i>Spartina densiflora</i> y un cangrejo <i>Neohelice granulata</i> (abajo, al centro) junto a la entrada de su cueva en la laguna costera de Mar Chiquita, provincia de Buenos Aires, Argentina.</figcaption></figure></div>
+        <div>
+          <p>En las marismas del Atlántico Sudoccidental, las plantas como <i>Spartina densiflora</i> producen grandes cantidades de detritos, y el cangrejo cavador <i>Neohelice granulata</i> remueve sedimento y construye densas galerías de cuevas. Bajo la mentoría de Clive Jones (Cary Institute) y Oscar Iribarne (UNMdP), estudié cómo la actividad de los cangrejos modifica la disponibilidad de carbono en el sedimento y la acumulación de detritos vegetales en superficie. También estudié cómo esa actividad afecta su exportación hacia los ambientes vecinos y, con ello, el funcionamiento y la conectividad de la marisma.</p>
+          <div class="pubs-label">Publicaciones destacadas</div>
+          <ol class="pubs">
+            <li><b>Gutiérrez JL</b>, Jones CG, Ribeiro PD, Findlay SEG, Groffman PM (2018). Crab burrowing limits surface litter accumulation in a temperate salt marsh: implications for ecosystem functioning and connectivity. <i>Ecosystems</i> 21: 1000-1012.</li>
+            <li><b>Gutiérrez JL</b>, Jones CG, Groffman PM, Findlay SEG, Iribarne OO, Ribeiro PD, Bruschetti CM (2006). The contribution of crab burrow excavation to carbon availability in surficial salt-marsh sediments. <i>Ecosystems</i> 9: 647-658.</li>
+            <li>Vera F, <b>Gutiérrez JL</b>, Ribeiro PD (2009). Aerial and detritus production of the cordgrass <i>Spartina densiflora</i> in a Southwestern Atlantic salt marsh. <i>Botany</i> 87: 482-491.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="sys">
+        <div><span class="tag">Síntesis y teoría</span><h3>Desarrollo conceptual</h3></div>
+        <div>
+          <p>Junto a Clive G. Jones y colegas de distintos países, desarrollé marcos conceptuales para entender cómo la modificación física del ambiente por los organismos afecta a las comunidades y al funcionamiento de los ecosistemas. Este trabajo incluye la ingeniería ecosistémica como fuente de heterogeneidad biogeoquímica, su aplicación a distintos grupos (como los moluscos productores de valvas) y ambientes costeros, y su vínculo con otros campos, como el estudio de las invasiones biológicas.</p>
+          <div class="pubs-label">Publicaciones destacadas</div>
+          <ol class="pubs">
+            <li>Jones CG, <b>Gutiérrez JL</b>, Byers JE, Crooks JA, Lambrinos JG, Talley TS (2010). A framework for understanding physical ecosystem engineering by organisms. <i>Oikos</i> 119: 1862-1869.</li>
+            <li><b>Gutiérrez JL</b>, Jones CG (2006). Physical ecosystem engineers as agents of biogeochemical heterogeneity. <i>BioScience</i> 56: 227-236.</li>
+            <li><b>Gutiérrez JL</b>, Jones CG, Strayer DL, Iribarne OO (2003). Mollusks as ecosystem engineers: the role of shell production in aquatic habitats. <i>Oikos</i> 101: 79-90.</li>
+          </ol>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="research" id="docencia">
+    <div class="wrap">
+      <header>
+        <div><div class="eyebrow">Docencia</div><h2>Los organismos como ingenieros ecosistémicos</h2></div>
+        <div class="intro">
+          <p>Desde 2019 dicto el curso de posgrado «Los Organismos como Ingenieros Ecosistémicos» en la Facultad de Ciencias Exactas y Naturales de la Universidad Nacional de Mar del Plata, con la colaboración de María Bagur (CADIC, CONICET) desde 2020. El curso presenta el concepto de ingeniería ecosistémica, sus consecuencias para las comunidades y los ecosistemas, y sus aplicaciones en la conservación y la restauración.</p>
+        </div>
+      </header>
+
+      <article class="sys">
+        <div><span class="tag">2019 – presente</span><h3>Historia del curso</h3></div>
+        <div>
+          <p>Un antecedente del curso fue la edición dictada en 2005 por Clive G. Jones en Mar del Plata, en la que participé como colaborador. El curso que dicto desde 2019 es una versión renovada y en permanente actualización, ya que en los años transcurridos el desarrollo del concepto de ingeniería ecosistémica, su uso y sus aplicaciones avanzaron enormemente, y siguen avanzando hoy. En 2023 dicté además una versión marina del curso, con un componente de trabajo de campo, para el Programa de Pós-Graduação em Biodiversidade e Ecologia Marinha e Costeira del Instituto do Mar (UNIFESP), que se realizó en Picinguaba, Ubatuba (SP), Brasil.</p>
+          <figure class="slidefig"><img src="img/curso_citas.png" alt="Gráfico de citas acumuladas de Jones et al. (1994) entre 1995 y 2025" width="1220" height="560" loading="lazy"><figcaption>Citas acumuladas de Jones et al. (1994), el artículo que introdujo el concepto de ingeniería ecosistémica. La línea vertical marca 2005, año de la primera edición del curso. Fuente: Google Scholar.</figcaption></figure>
+          <div class="pubs-label">Ediciones</div>
+          <ul class="editions"><li><span class="yr">2019, 2022</span><span>Presencial, UNMdP.</span></li><li><span class="yr">2020, 2021, 2023</span><span>Virtual, UNMdP.</span></li><li><span class="yr">2023</span><span>Versión marina con trabajo de campo, UNIFESP, Picinguaba, Ubatuba (SP), Brasil.</span></li><li><span class="yr">2024, 2025, 2026</span><span>Presencial y virtual, UNMdP.</span></li></ul>
+        </div>
+      </article>
+
+      <article class="sys">
+        <div><span class="tag">Programa</span><h3>Contenidos</h3></div>
+        <div>
+          <p>El curso se organiza en seis unidades: introducción, definición formal del concepto, consecuencias bióticas de la ingeniería ecosistémica, cómo estudiar a los ingenieros, sus usos y servicios, y su restauración. Cierra con presentaciones de los estudiantes.</p>
+          <figure class="slidefig" style="max-width:340px"><img src="img/curso_esquema.png" alt="Esquema del proceso de ingeniería ecosistémica con sus retroalimentaciones" width="650" height="888" loading="lazy"><figcaption>El proceso de ingeniería ecosistémica (flechas rojas): el ingeniero causa un cambio estructural que genera un cambio abiótico. Las flechas verdes indican sus consecuencias: el cambio biótico y las retroalimentaciones al ingeniero por tres vías (A: abiótica, B: estructural, C: biótica).</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="sys">
+        <div><span class="tag">Estudiantes</span><h3>¿De dónde vienen los estudiantes?</h3></div>
+        <div>
+          <p>Hasta ahora, más de 110 estudiantes aprobaron el curso en la UNMdP y su versión marina en la UNIFESP. Provienen de todo el país, de Catamarca a Ushuaia, y también de Brasil, Estados Unidos y Costa Rica.</p>
+          <figure class="mapfig"><img src="img/mapa_estudiantes_es.jpg" alt="Mapa con la procedencia de los estudiantes del curso" width="1100" height="1392" loading="lazy"><figcaption>Procedencia de los estudiantes que aprobaron el curso en la UNMdP (presencial y virtual) y en la UNIFESP (presencial). El tamaño de cada círculo indica el número de estudiantes.</figcaption></figure>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<section class="research" id="publicaciones">
+  <div class="wrap">
+    <header>
+      <div><div class="eyebrow">Publicaciones</div><h2>Lista completa</h2></div>
+      <div class="intro">
+        <p class="count">Artículos y capítulos publicados, más volúmenes editados.</p>
+        <ul class="publinks"><li><a href="https://scholar.google.com/citations?user=yCCGhYgAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li><li><a href="https://orcid.org/0000-0003-2914-9274" target="_blank" rel="noopener">ORCID</a></li><li><a href="https://www.researchgate.net/profile/Jorge-Gutierrez-9" target="_blank" rel="noopener">ResearchGate</a></li></ul>
+      </div>
+    </header>
+<div class="year"><h3>2026</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b> 2026. Thermal refugia and summer survival of the non-native land snail <i>Theba pisana</i> in Pampean coastal dunes: the role of invasive iceplants. Acta Oecologica 131: 104166. DOI: <a href="https://doi.org/10.1016/j.actao.2026.104166" target="_blank" rel="noopener">10.1016/j.actao.2026.104166</a></li><li>Isla, F.I., Mojica, M., <b>Gutiérrez, J.L.</b> 2026. Erosión diferencial de acantilados y plataformas de abrasión en Mar del Plata, Argentina. Revista de la Asociación Geológica Argentina 83: 16-32.</li><li>Oliveira-Carlos, F.C., Longo, P.A.S., <b>Gutiérrez J.L.</b>, Santos, C.G.S, Senna, A.R., Pereira-Filho, G.H. 2026. The rolling stones' legacy: rhodoliths retain their habitat function after algal death. Marine Environmental Research 215: 107809. DOI: <a href="https://doi.org/10.1016/j.marenvres.2025.107809" target="_blank" rel="noopener">10.1016/j.marenvres.2025.107809</a></li></ol></div>
+<div class="year"><h3>2025</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Bagur, M., Arribas, L.P., Palomo, M.G. 2025. Chemically-boring bivalves can mineralize more CaCO3 than they dissolve: the case of <i>Leiosolenus patagonicus</i>. Marine Biology 172: 152. DOI: <a href="https://doi.org/10.1007/s00227-025-04716-2" target="_blank" rel="noopener">10.1007/s00227-025-04716-2</a></li><li>Longo, P.A.S., Passos, F.D., <b>Gutiérrez, J.L.</b>, Laurino, I.R.A., Pereira-Filho, G.H. 2025. Macroalgal foundation species blur latitudinal trends in prosobranch gastropod assemblages. Biodiversity and Conservation 34: 1709-1732. DOI: <a href="https://doi.org/10.1007/s10531-025-03038-5" target="_blank" rel="noopener">10.1007/s10531-025-03038-5</a></li></ol></div>
+<div class="year"><h3>2024</h3><ol class="pubs"><li>Bouzas, S.O., Palomo, M.G., <b>Gutiérrez, J.L.</b> 2024. Size-dependent effects of an epibiotic seaweed on the probability of dislodgement of an intertidal mussel. Estuarine, Coastal and Shelf Science 301: 108739.</li><li>Roos, N.C., Veras, P.C., <b>Gutiérrez, J.L.</b>, Gibran, F.Z., Pinheiro, H.T., Francini-Filho, R.B., Longo, L.L., Santos, C.S.G, Senna, A.R., Pereira-Filho, G.H. 2024. Secondary engineering of rhodolith beds by the sand tilefish <i>Malacanthus plumieri</i> generates distinctive habitats for benthic macroinvertebrates and fish. Biodiversity and Conservation 33: 1941-1957. DOI: <a href="https://doi.org/10.1007/s10531-024-02821-0" target="_blank" rel="noopener">10.1007/s10531-024-02821-0</a></li><li>Soria, S.A., <b>Gutiérrez, J.L.</b>, Palomo, M.G. 2024. A non-native barnacle accelerates the recovery from disturbance of intertidal mussel beds. Marine Ecology Progress Series 732: 73-83. DOI: <a href="https://doi.org/10.3354/meps14541" target="_blank" rel="noopener">10.3354/meps14541</a></li><li><b>Gutiérrez, J.L.</b>, Jones, C.G., Byers, J.E., Arkema, K.K., Berkenbusch, K., Committo, J.A., Duarte, C.M., Gillis, L.G., Hacker, S.D., Hendriks, I.E., Hogarth, P.J., Lambrinos, J.G., Palomo, M.G., Wild, C. 2024. Physical ecosystem engineers and the functioning of estuaries and coasts. In: Baird, D. (Ed.), Volume 4. Structure and Function of Biological Communities and Coastal Ecosystems. In: Baird, D, Elliot, M. (Eds.), Treatise on Estuarine and Coastal Science, 2nd. Edition. Elsevier, Amsterdam, The Netherlands. pp. 607-644. DOI: <a href="https://doi.org/10.1016/B978-0-323-90798-9.00093-7" target="_blank" rel="noopener">10.1016/B978-0-323-90798-9.00093-7</a></li></ol></div>
+<div class="year"><h3>2023</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Bagur, M., Lorenzo, R., Palomo, M.G. 2023. A facultative mutualism between habitat-forming species enhances the resistance of rocky shore communities to heat waves. Frontiers in Ecology and Evolution 11: 1278762. DOI: <a href="https://doi.org/10.3389/fevo.2023.1278762" target="_blank" rel="noopener">10.3389/fevo.2023.1278762</a></li><li>Novoa, A., Hirsch, H., Castillo, M.L., Canavan, S., González, L., Richardson, D.M., Pyšek, P., Rodríguez, J., Borges Silva, L., Brundu, G., D'Antonio, C.M., <b>Gutiérrez, J.L.</b>, Mathese, M., Levin, S., Silva, L., Le Roux, J.J. 2023. Genetic and morphological insights into the <i>Carpobrotus</i> hybrid complex around the world. NeoBiota 89: 135-160. DOI: <a href="https://doi.org/10.3897/neobiota.89.109164" target="_blank" rel="noopener">10.3897/neobiota.89.109164</a></li><li>Soria, S.A., <b>Gutiérrez, J.L.</b>, Palomo, M.G. 2023. How climate-driven changes in disturbance frequency affect the recovery of intertidal mussel beds. Journal of Experimental Marine Biology and Ecology 562: 151885. DOI: <a href="https://doi.org/10.1016/j.jembe.2023.151885" target="_blank" rel="noopener">10.1016/j.jembe.2023.151885</a></li></ol></div>
+<div class="year"><h3>2022</h3><ol class="pubs"><li>Soria, S.A., <b>Gutiérrez, J.L.</b>, Gonzalez, J.A., Callá, S.L., Palomo, M.G. 2022. Habitat properties and invertebrate composition in mussel-dominated rocky shores: a test of edge effects. Estuarine Coastal and Shelf Science 277: 108035. DOI: <a href="https://doi.org/10.1016/j.ecss.2022.108035" target="_blank" rel="noopener">10.1016/j.ecss.2022.108035</a></li><li>Bagur, M., <b>Gutiérrez, J.L.</b>, González, J.A., Arribas, L.P., Palomo, M.G. 2022. Physical rather than biotic factors set the lower limit of mussel beds in a horizontal rocky intertidal platform. Journal of Experimental Marine Biology and Ecology 548: 151680. DOI: <a href="https://doi.org/10.1016/j.jembe.2021.151680" target="_blank" rel="noopener">10.1016/j.jembe.2021.151680</a></li><li><b>Gutiérrez, J.L.</b>, Hacker, S.D., Coombes, M.A., Wild, C., Pereira-Filho, G.H., Palomo, M.G. 2022. Marine hard bottom communities. In: Pan, J., Pratolongo, P. (Eds.). Marine Biology: A Functional Approach to the Oceans and their Organisms. CRC Press, Boca Raton, FL, USA. pp. 226-267.</li></ol></div>
+<div class="year"><h3>2021</h3><ol class="pubs"><li>Gonzalez, J.A., Coombes, M.A., Palomo, M.G., Isla, F.I., Soria, S.A., <b>Gutiérrez, J.L.</b> 2021. Enhanced weathering and erosion of a cohesive shore platform following the experimental removal of mussels. Frontiers in Marine Science 8: 756016. DOI: <a href="https://doi.org/10.3389/fmars.2021.756016" target="_blank" rel="noopener">10.3389/fmars.2021.756016</a></li><li><b>Gutiérrez, J.L.</b> 2021 Invader to invader facilitation: ice plant mats prompt increased densities and grazing impacts of white garden snails in a Pampean coastal dune system. Biological Invasions 23: 2381-2387. DOI: <a href="https://doi.org/10.1007/s10530-021-02529-0" target="_blank" rel="noopener">10.1007/s10530-021-02529-0</a></li></ol></div>
+<div class="year"><h3>2020</h3><ol class="pubs"><li>Cruz Motta, J.J., Miloslavich, P., Guerra-Castro, E, Hernandez-Agreda, A., Herrera, C., Barros, F., Navarrete, S., Sepúlveda, R., Glasby, T., Bigatti, G., Cárdenas-Calle, M., de Macedo-Carneiro, P. B., Carranza, A., Flores, A., Gil Kodaka, P., Gobin, J., <b>Gutiérrez, J.L.</b>, Klein, E., Krull, M., Lazarus, J., Londoño-Cruz, E., Lotufo, T., Macaya, E., Mora, E., Mora, C., Palomo, M. G., Parragué, M., Pellizzari, F., Retamales, R., Rocha, R., Romero, L. 2020. Latitudinal patterns of species diversity on South American rocky shores: local processes lead to contrasting trends in regional and local species diversity. Journal of Biogeography 47: 1966-1979. DOI: <a href="https://doi.org/10.1111/jbi.13869" target="_blank" rel="noopener">10.1111/jbi.13869</a></li><li><b>Gutiérrez, J.L.</b> 2020. Ecosystem engineers in the world coasts: case studies and conceptual linkages. Diversity 12: 243. DOI: <a href="https://doi.org/10.3390/d12060243" target="_blank" rel="noopener">10.3390/d12060243</a></li></ol></div>
+<div class="year"><h3>2019</h3><ol class="pubs"><li>Bagur, M., <b>Gutiérrez, J.L.</b>, Arribas, L.P., Palomo, M.G. 2019. Vacant bivalve boreholes increase invertebrate species richness in a physically harsh, low intertidal platform. Diversity 11: 39. DOI: <a href="https://doi.org/10.3390/d11030039" target="_blank" rel="noopener">10.3390/d11030039</a></li><li>Arribas, L.P., <b>Gutiérrez, J.L.</b>, Bagur, M., Soria, S.A., Penchaszadeh, P.E., Palomo, M.G. 2019. Variation in aggregate descriptors of rocky shore communities: a test of synchrony across spatial scales. Marine Biology 166: 44. DOI: <a href="https://doi.org/10.1007/s00227-019-3492-6" target="_blank" rel="noopener">10.1007/s00227-019-3492-6</a></li><li><b>Gutiérrez, J.L.</b>, Bagur, M., Palomo, M.G. 2019. Algal epibionts as co-engineers in mussel beds: effects on abiotic conditions and mobile interstitial invertebrates. Diversity 11: 17. DOI: <a href="https://doi.org/10.3390/d11020017" target="_blank" rel="noopener">10.3390/d11020017</a></li></ol></div>
+<div class="year"><h3>2018</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Jones, C.G, Ribeiro, P.D., Findlay, S.E.G., Groffman, P.M. 2018. Crab burrowing limits surface litter accumulation in a temperate salt marsh: implications for ecosystem functioning and connectivity. Ecosystems 21: 1000-1012. DOI: <a href="https://doi.org/10.1007/s10021-017-0200-6" target="_blank" rel="noopener">10.1007/s10021-017-0200-6</a></li><li><b>Gutiérrez, J.L.</b>, Bagur, M., Arribas, L.P., Palomo, M.G. 2018. Does rock type account for variation in mussel attachment strength? A test with <i>Brachidontes rodriguezii</i> in the Southwestern Atlantic. Helgoland Marine Research 72: 10. DOI: <a href="https://doi.org/10.1186/s10152-018-0514-6" target="_blank" rel="noopener">10.1186/s10152-018-0514-6</a></li></ol></div>
+<div class="year"><h3>2017</h3><ol class="pubs"><li>Soria, S.A., Teso, V., <b>Gutiérrez, J.L.</b>, Arribas, L.P., Scarabino, F., Palomo, M.G. 2017. Variation in density, size, and morphology of the pulmonate limpet <i>Siphonaria lessonii</i> along the Southwestern Atlantic. Journal of Sea Research 129: 29-35. DOI: <a href="https://doi.org/10.1016/j.seares.2017.08.014" target="_blank" rel="noopener">10.1016/j.seares.2017.08.014</a></li><li><b>Gutiérrez, J.L.</b> 2017. Modification of habitat quality by non-native species. In: Vilà, M., Hulme, P.E. (Eds.). Impact of Biological Invasions on Ecosystem Services. Springer, Cham, Switzerland. pp. 33-47. DOI: <a href="https://doi.org/10.1007/978-3-319-45121-3_3" target="_blank" rel="noopener">10.1007/978-3-319-45121-3_3</a></li></ol></div>
+<div class="year"><h3>2016</h3><ol class="pubs"><li>Bagur, M., <b>Gutiérrez, J.L.</b>, Arribas, L.P., Palomo, M.G. 2016. Complementary influences of co-occurring physical ecosystem engineers on species richness: insights from a Patagonian rocky shore. Biodiversity and Conservation 25: 2787-2802. DOI: <a href="https://doi.org/10.1007/s10531-016-1203-x" target="_blank" rel="noopener">10.1007/s10531-016-1203-x</a></li><li>Arribas, L.P., Bagur, M., Soria, S.A., <b>Gutiérrez, J.L.</b>, Palomo, M.G. 2016. Competition between mussels at the rocky intertidal zone of La Lobería, Río Negro, Argentina. Revista del Museo Argentino de Ciencias Naturales 18: 1-7. DOI: <a href="https://doi.org/10.22179/revmacn.18.424" target="_blank" rel="noopener">10.22179/revmacn.18.424</a></li><li><b>Gutiérrez, J.L.</b>, Palomo, M.G. 2016. Increased algal fouling on mussels with barnacle epibionts: a fouling cascade. Journal of Sea Research 112: 49-54. DOI: <a href="https://doi.org/10.1016/j.seares.2016.04.002" target="_blank" rel="noopener">10.1016/j.seares.2016.04.002</a></li><li>Miloslavich, P., Cruz-Motta, J.J., Hernández A., Herrera, C., Klein, E., Barros, F., Bigatti, G., Cárdenas, M., Carranza, A., Flores, A., Gil, P., Gobin, J., <b>Gutiérrez, J.L.</b>, Krull, M., Lazarus, J.F., Londoño, E., Lotufo, T., Macaya, E., Mora, E., Navarrete, S., Palomo, M.G., Parragué, M., Pellizzari, F., Rocha, R., Romero, L., Retamales, R., Sepúlveda, R., Silva, M.C., Soria, S. 2016. Benthic assemblages in South American intertidal rocky shores: biodiversity, services, and threats. In: Riosmena-Rodríguez, R. (Ed.) Marine Benthos: Biology, Ecosystem Functions and Environmental Impact. Nova Science Publishers, Hauppauge, NY, USA. pp. 83-137.</li></ol></div>
+<div class="year"><h3>2015</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Palomo, M.G., Bagur, M., Arribas, L.P., Soria, S.A. 2015. Wave action limits crowding in an intertidal mussel. Marine Ecology Progress Series 518: 153-163. DOI: <a href="https://doi.org/10.3354/meps11086" target="_blank" rel="noopener">10.3354/meps11086</a></li><li>Arribas, L.P., Bagur, M., <b>Gutiérrez, J.L.</b>, Palomo, M.G. 2015. Matching spatial scales of variation in mussel recruitment and adult densities across Southwestern Atlantic rocky shores. Journal of Sea Research 95: 16-21. DOI: <a href="https://doi.org/10.1016/j.seares.2014.10.015" target="_blank" rel="noopener">10.1016/j.seares.2014.10.015</a></li></ol></div>
+<div class="year"><h3>2014</h3><ol class="pubs"><li>Bagur, M., <b>Gutiérrez, J.L.</b>, Arribas, L.P., Palomo, M.G. 2014. Endolithic invertebrate communities and bioerosion rates in Southwestern Atlantic intertidal consolidated sediments. Marine Biology 161: 2279-2292. DOI: <a href="https://doi.org/10.1007/s00227-014-2505-8" target="_blank" rel="noopener">10.1007/s00227-014-2505-8</a></li><li><b>Gutiérrez, J.L.</b>, Jones, C.G., Sousa, R. 2014. Toward an integrated ecosystem perspective of invasive species impacts. Acta Oecologica 54: 131-138. DOI: <a href="https://doi.org/10.1016/j.actao.2013.10.003" target="_blank" rel="noopener">10.1016/j.actao.2013.10.003</a></li><li><b>Gutiérrez, J.L.</b>, Palomo, M.G. Ribeiro, P.D. 2014. BIOLIEF 2011: Linking invasive species and ecosystems. Acta Oecologica 54: 1-3. DOI: <a href="https://doi.org/10.1016/j.actao.2013.09.009" target="_blank" rel="noopener">10.1016/j.actao.2013.09.009</a></li></ol></div>
+<div class="year"><h3>2013</h3><ol class="pubs"><li>Bagur, M., Richardson, C.A., <b>Gutiérrez, J.L.</b>, Arribas, L.P., Doldan M.S., Palomo, M.G. 2013. Age, growth and mortality in four populations of the boring bivalve <i>Lithophaga patagonica</i> from Argentina. Journal of Sea Research 81: 49-56. DOI: <a href="https://doi.org/10.1016/j.seares.2013.04.003" target="_blank" rel="noopener">10.1016/j.seares.2013.04.003</a></li></ol></div>
+<div class="year"><h3>2011</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Jones, C.G., Byers, J.E., Arkema, K.K., Berkenbusch, K., Committo, J.A., Duarte, C.M., Hacker, S.D., Hendriks, I.E., Hogarth, P.J., Lambrinos, J.G., Palomo, M.G., Wild, C. 2011. Physical ecosystem engineers and the functioning of estuaries and coasts. In: Heip, C.H.R., Philippart, C.J.M., Middelburg, J.J. (Eds.). Volume 7: Functioning of Estuaries and Coastal Ecosystems. In: Wolanski, E., McLusky, D. (Eds.), Treatise on Estuarine and Coastal Science. Elsevier, Amsterdam, The Netherlands. pp. 53-81. DOI: <a href="https://doi.org/10.1016/B978-0-12-374711-2.00705-1" target="_blank" rel="noopener">10.1016/B978-0-12-374711-2.00705-1</a></li></ol></div>
+<div class="year"><h3>2010</h3><ol class="pubs"><li>Jones, C.G., <b>Gutiérrez, J.L.</b>, Byers, J.E., Crooks, J.A., Lambrinos, J.G., Talley, T.S. 2010. A framework for understanding physical ecosystem engineering by organisms. Oikos 119: 1862-1869. DOI: <a href="https://doi.org/10.1111/j.1600-0706.2010.18782.x" target="_blank" rel="noopener">10.1111/j.1600-0706.2010.18782.x</a></li></ol></div>
+<div class="year"><h3>2009</h3><ol class="pubs"><li>Sousa, R., <b>Gutiérrez, J.L.</b>, Aldridge, D. 2009. Non-indigenous invasive bivalves as ecosystem engineers. Biological Invasions 11: 2367-2385. DOI: <a href="https://doi.org/10.1007/s10530-009-9422-7" target="_blank" rel="noopener">10.1007/s10530-009-9422-7</a></li><li>Vera, F., <b>Gutiérrez, J.L.</b>, Ribeiro, P.D. 2009. Aerial and detritus production of the cordgrass <i>Spartina densiflora</i> in a Southwestern Atlantic salt marsh. Botany 87: 482-491.</li></ol></div>
+<div class="year"><h3>2008</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Jones, C.G. 2008. Ecosystem engineers. In: Encyclopedia of Life Sciences. John Wiley &amp; Sons, Chichester, UK. DOI: <a href="https://doi.org/10.1002/9780470015902.a0021226" target="_blank" rel="noopener">10.1002/9780470015902.a0021226</a></li><li><b>Gutiérrez J.L.</b> 2008. Crab influences on the export of plant detritus from salt marshes and mangroves: A review. In: Chen, J., Guô, C. (Eds.). Ecosystem Ecology Research Trends. Nova Science Publishers, Hauppauge, NY, USA. pp. 327-344.</li></ol></div>
+<div class="year"><h3>2007</h3><ol class="pubs"><li>Jones, C.G., <b>Gutiérrez, J.L.</b> 2007. On the purpose, meaning, and usage of the ecosystem engineering concept. In: Cuddington, K., Byers, J.E., Wilson, W.G., Hastings, A. (Eds.). Ecosystem Engineers: Plants to Protists. Academic Press, New York, NY, USA. pp. 3-24.</li></ol></div>
+<div class="year"><h3>2006</h3><ol class="pubs"><li>Jones, C.G., <b>Gutiérrez, J.L.</b>, Groffman, P.M, Shachak, M. 2006. Linking ecosystem engineers to soil processes: A framework using the Jenny State Factor equation. European Journal of Soil Biology 42: S39-S53. DOI: <a href="https://doi.org/10.1016/j.ejsobi.2006.07.017" target="_blank" rel="noopener">10.1016/j.ejsobi.2006.07.017</a></li><li><b>Gutiérrez, J.L.</b>, Jones, C.G., Groffman, P.M., Findlay, S.E.G., Iribarne, O.O., Ribeiro, P.D., Bruschetti, C.M. 2006. The contribution of crab burrow excavation to carbon availability in surficial salt-marsh sediments. Ecosystems 9: 647-658. DOI: <a href="https://doi.org/10.1007/s10021-006-0135-9" target="_blank" rel="noopener">10.1007/s10021-006-0135-9</a></li><li>Botto, F., Iribarne O.O., <b>Gutiérrez J.L.</b>, Bava, J., Gagliardini, A., Valiela, I. 2006. Ecological importance of passive deposition of organic matter into burrows of the SW Atlantic crab <i>Chasmagnathus granulatus</i>. Marine Ecology Progress Series 312: 201-210. DOI: <a href="https://doi.org/10.3354/meps312201" target="_blank" rel="noopener">10.3354/meps312201</a></li><li><b>Gutiérrez, J.L.</b>, Jones, C.G. 2006. Physical ecosystem engineers as agents of biogeochemical heterogeneity. BioScience 56: 227-236. DOI: <a href="https://doi.org/10.1641/0006-3568(2006)056[0227:PEEAAO]2.0.CO;2" target="_blank" rel="noopener">10.1641/0006-3568(2006)056[0227:PEEAAO]2.0.CO;2</a></li></ol></div>
+<div class="year"><h3>2005</h3><ol class="pubs"><li>Lomovasky, B.J., <b>Gutiérrez, J.L.</b>, Iribarne O.O. 2005. Identifying repaired shell damage and abnormal calcification in the stout razor clam <i>Tagelus plebeius</i> as a tool to investigate its ecological interactions. Journal of Sea Research 54: 163-175. DOI: <a href="https://doi.org/10.1016/j.seares.2005.01.004" target="_blank" rel="noopener">10.1016/j.seares.2005.01.004</a></li><li>Iribarne, O.O., Bruschetti, C.M., Escapa, M., Bava, J., Botto, F., <b>Gutiérrez, J.L.</b>, Palomo, M.G., Delhey, K., Petracci, P., Gagliardini, A. 2005. Small and large-scale effect of the SW Atlantic burrowing crab <i>Chasmagnathus granulatus</i> on habitat use by migratory shorebirds. Journal of Experimental Marine Biology and Ecology 315: 87-101. DOI: <a href="https://doi.org/10.1016/j.jembe.2004.09.006" target="_blank" rel="noopener">10.1016/j.jembe.2004.09.006</a></li></ol></div>
+<div class="year"><h3>2004</h3><ol class="pubs"><li>Cledon, M., Peralta-Brichtova, A.C., <b>Gutiérrez, J.L.</b>, Penchaszadeh, P.E. 2004. Reproductive cycle of the stout razor clam, <i>Tagelus plebeius</i> (Lightfoot, 1786), in the Mar Chiquita Coastal Lagoon, Argentina. Journal of Shellfish Research 23: 443-446.</li><li><b>Gutiérrez, J.L.</b>, Iribarne, O.O. 2004. Conditional responses of organisms to habitat structure: An example from intertidal mudflats. Oecologia 139: 572-582. DOI: <a href="https://doi.org/10.1007/s00442-004-1533-3" target="_blank" rel="noopener">10.1007/s00442-004-1533-3</a></li><li><b>Gutiérrez, J.L.</b>, Palomo, M.G., Iribarne, O.O. 2004. Environmental heterogeneity and species responses to fishing disturbance: Are the effects of clam harvesting spatially consistent? Fisheries Research 67: 55-70. DOI: <a href="https://doi.org/10.1016/j.fishres.2003.08.005" target="_blank" rel="noopener">10.1016/j.fishres.2003.08.005</a></li></ol></div>
+<div class="year"><h3>2003</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Iribarne, O.O. 2003. Spatial variation in the body mass of the stout razor clam <i>Tagelus plebeius</i>: Does the density of burrowing crabs <i>Chasmagnathus granulata</i> matter? Journal of Shellfish Research 22: 69-73.</li><li><b>Gutiérrez, J.L.</b>, Jones, C.G., Strayer, D.L., Iribarne, O.O. 2003. Mollusks as ecosystem engineers: The role of shell production in aquatic habitats. Oikos 101: 79-90. DOI: <a href="https://doi.org/10.1034/j.1600-0706.2003.12322.x" target="_blank" rel="noopener">10.1034/j.1600-0706.2003.12322.x</a></li></ol></div>
+<div class="year"><h3>2001</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Valero, J.L. 2001. La almeja navaja <i>Tagelus plebeius</i> y su participación en mecanismos ecológicos de comunidades intermareales mediante la producción de valvas. In: Iribarne, O. O. (Ed.), Reserva de Biósfera Mar Chiquita: Características físicas y ecológicas. Editorial Martín, Mar del Plata, Argentina. pp. 121-128.</li></ol></div>
+<div class="year"><h3>2000</h3><ol class="pubs"><li>Iribarne, O.O., Botto, F., Martinetto, P., <b>Gutiérrez, J.L.</b> 2000. The role of burrows of the Southwestern Atlantic crab <i>Chasmagnathus granulata</i> in trapping debris. Marine Pollution Bulletin 40: 1057-1062. DOI: <a href="https://doi.org/10.1016/s0025-326x(00)00058-8" target="_blank" rel="noopener">10.1016/s0025-326x(00)00058-8</a></li><li><b>Gutiérrez, J.L.</b>, Palomo, M.G., Iribarne, O.O. 2000. Patterns of abundance and seasonality of polychaetes in SW Atlantic epibenthic shell beds. Bulletin of Marine Science 67: 165-174.</li></ol></div>
+<div class="year"><h3>1999</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Iribarne, O.O. 1999. Role of Holocene beds of the stout razor clam <i>Tagelus plebeius</i> in structuring present benthic communities. Marine Ecology Progress Series 185: 213-228. DOI: <a href="https://doi.org/10.3354/meps185213" target="_blank" rel="noopener">10.3354/meps185213</a></li></ol></div>
+<div class="year"><h3>1998</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b>, Iribarne, O.O. 1998. The occurrence of juveniles of the grapsid crab <i>Chasmagnathus granulata</i> in siphon holes of the stout razor clam <i>Tagelus plebeius</i>. Journal of Shellfish Research 17: 925-929.</li></ol></div>
+<div class="year"><h3>Volúmenes editados</h3><ol class="pubs"><li><b>Gutiérrez, J.L.</b> 2019. Diversity of physical ecosystem engineers in the world coasts and oceans. Diversity Vol 11.</li><li><b>Gutiérrez, J.L.</b>, Bernstein, C. 2014. Ecosystem impacts of invasive species. Acta Oecologica Vol. 54.</li></ol></div>
+  </div>
+</section>
+
+<footer><div class="wrap">Jorge L. Gutiérrez · CONICET – UNMdP · <span>Última actualización: noviembre de 2026</span></div></footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){btn.addEventListener('click',function(){var el=btn.previousElementSibling,txt=el.textContent,orig=btn.textContent;function done(){btn.textContent=btn.getAttribute('data-ok');setTimeout(function(){btn.textContent=orig;},1600);}function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}try{navigator.clipboard.writeText(txt).then(done,sel);}catch(e){sel();}});});
+</script>
+</body>
+</html>
