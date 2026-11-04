@@ -106,7 +106,10 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
   .sysimg{max-width:420px}
   nav{gap:14px}
 }
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* una sección por vez */
+.js [data-page]:not(.on){display:none}
+nav a.on{color:var(--ink,#1a1a1a);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
 </style>
 </head>
 <body>
@@ -119,7 +122,7 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
       <a href="#home">Home</a>
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
-      <a href="#publicaciones">Publications</a>
+      <a href="#publications">Publications</a>
       <span class="lang" role="group" aria-label="Idioma / Language">
         <a href="../" hreflang="es" lang="es">ES</a><span class="cur" aria-current="page">EN</span>
       </span>
@@ -128,7 +131,7 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
 </header>
 
 <main lang="en">
-  <div class="wrap" id="home">
+  <div class="wrap" id="home" data-page>
     <div class="hero">
       <img class="portrait" src="../img/perfil.jpg" alt="Jorge L. Gutiérrez" width="800" height="1000">
       <div>
@@ -158,7 +161,7 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
     </div>
   </div>
 
-  <section class="research" id="research">
+  <section class="research" id="research" data-page>
     <div class="wrap">
       <header>
         <div><div class="eyebrow">Research</div><h2>Environmental Modification by Organisms</h2></div>
@@ -250,7 +253,7 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
     </div>
   </section>
 
-  <section class="research" id="teaching">
+  <section class="research" id="teaching" data-page>
     <div class="wrap">
       <header>
         <div><div class="eyebrow">Teaching</div><h2>Organisms as Ecosystem Engineers</h2></div>
@@ -288,7 +291,7 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
   </section>
 </main>
 
-<section class="research" id="publicaciones">
+<section class="research" id="publications" data-page>
   <div class="wrap">
     <header>
       <div><div class="eyebrow">Publications</div><h2>Full list</h2></div>
@@ -332,6 +335,24 @@ footer{border-top:1px solid var(--rule);padding-block:28px;font-family:var(--f-m
 
 <script>
 document.querySelectorAll('.copy').forEach(function(btn){btn.addEventListener('click',function(){var el=btn.previousElementSibling,txt=el.textContent,orig=btn.textContent;function done(){btn.textContent=btn.getAttribute('data-ok');setTimeout(function(){btn.textContent=orig;},1600);}function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}try{navigator.clipboard.writeText(txt).then(done,sel);}catch(e){sel();}});});
+</script>
+<script>
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('[data-page]'));
+  var links=[].slice.call(document.querySelectorAll('header.top a[href^="#"]'));
+  document.documentElement.classList.add('js');
+  function show(){
+    var h=location.hash.slice(1), t=h&&document.getElementById(h);
+    var p=t?(t.closest('[data-page]')||pages[0]):pages[0];
+    pages.forEach(function(x){x.classList.toggle('on',x===p);});
+    links.forEach(function(a){var on=a.getAttribute('href')==='#'+p.id&&a.className!=='brand';a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','page');else if(a.className!=='brand')a.removeAttribute('aria-current');});
+    var m={inicio:'home',investigacion:'research',docencia:'teaching',publicaciones:'publications'},r={};for(var k in m)r[m[k]]=k;
+    var ln=document.querySelector('.lang a');if(ln){var base=ln.getAttribute('href').split('#')[0],o=m[p.id]||r[p.id];ln.setAttribute('href',base+(o&&p!==pages[0]?'#'+o:''));}
+    if(t&&t!==p){t.scrollIntoView();}else{window.scrollTo(0,0);}
+  }
+  window.addEventListener('hashchange',show);
+  show();
+})();
 </script>
 </body>
 </html>
